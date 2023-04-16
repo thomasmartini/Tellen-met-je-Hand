@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Load three.js -->
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
+    
+    <!-- GPU backend -->
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script>
+    <!-- CPU backend -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-cpu"></script> -->
+    <!-- WASM backend -->
+    <!-- <script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.1.0/dist/tf-backend-wasm.js"></script> -->
+    
+    <script defer src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
+    <script defer src="./knear.js"></script>
+    <script defer src="./app.js"></script>
+</head>
+<body>
+    <h1>Tellen met je handen</h1>
+    <h2 id ="score">score: 0</h2>
+    <h3 id ="highscore">highscore: 0</h3>
+
+
+    <div id="container">
+
+        <div>
+            <strong id = "sum">?</strong>
+            <strong> + </strong>
+            <canvas id="output"></canvas>
+            <video id="video" playsinline ></video>
+            <strong> = </strong>
+            <strong id = "answer">?</strong>
+        </div>
+        <div id = buttons>
+        <button id="predict">Check</button>
+        <button id="assignment">Nieuwe rekensom</button>
+        </div>
+</body>
